@@ -40,7 +40,7 @@ public class RatingController {
                 stars[i].setStyle("-fx-text-fill: black; -fx-font-size: 24px;");
             } else {
                 stars[i].setText("☆");
-                stars[i].setStyle("-fx-text-fill: gray; -fx-font-size: 24px;");
+                stars[i].setStyle("-fx-text-fill: yellow; -fx-font-size: 24px;");
             }
         }
     }

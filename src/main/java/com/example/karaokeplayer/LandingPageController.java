@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MediaPlayer {
+public class LandingPageController {
 
     @FXML
     void enterPlayer(ActionEvent event) throws IOException {
@@ -25,7 +25,7 @@ public class MediaPlayer {
         stage.setTitle("Karaoke Player");
 
 
-        stage.setResizable(true);
+        stage.setResizable(false);
 
 
         stage.show();
