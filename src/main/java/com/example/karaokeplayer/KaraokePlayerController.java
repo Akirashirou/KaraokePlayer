@@ -126,7 +126,7 @@ public class KaraokePlayerController {
     private void sliderPressed(MouseEvent event) {
         mediaPlayer.seek(Duration.seconds(slider.getValue()));
     }
-
+    //RatingDialog
     private void showRatingDialog() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("rating-dialog.fxml"));
@@ -139,7 +139,7 @@ public class KaraokePlayerController {
             e.printStackTrace();
         }
     }
-
+    //RestartVideo Method
     public void restartVideo() {
         if (mediaPlayer != null) {
             mediaPlayer.seek(Duration.ZERO);
