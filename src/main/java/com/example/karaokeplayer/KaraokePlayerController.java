@@ -36,7 +36,7 @@ public class KaraokePlayerController {
     private Slider volumeSlider;
 
     private Media media;
-    private MediaPlayer mediaPlayer;
+    private static MediaPlayer mediaPlayer;
 
     private boolean isPlayed = false;
 
@@ -91,7 +91,7 @@ public class KaraokePlayerController {
             volumeSlider.setValue(20);
             mediaPlayer.setVolume(0.2);
 
-
+            //volumeSlider
             volumeSlider.valueProperty().addListener((obs, oldVal, newVal) -> {
                 if (mediaPlayer != null) {
                     mediaPlayer.setVolume(newVal.doubleValue() / 100.0);
@@ -99,7 +99,7 @@ public class KaraokePlayerController {
             });
 
             mediaView.setMediaPlayer(mediaPlayer);
-
+            //Duration
             mediaPlayer.currentTimeProperty().addListener((observableValue, oldValue, newValue) -> {
                 slider.setValue(newValue.toSeconds());
                 lblDuration.setText("Duration: " + (int) slider.getValue() + " / " + (int) media.getDuration().toSeconds());
@@ -110,7 +110,7 @@ public class KaraokePlayerController {
                 slider.setMax(totalDuration.toSeconds());
                 lblDuration.setText("Duration: 00 / " + (int) totalDuration.toSeconds());
             });
-
+            //showRatingsDialog
             mediaPlayer.setOnEndOfMedia(this::showRatingDialog);
 
             Scene scene = mediaView.getScene();
