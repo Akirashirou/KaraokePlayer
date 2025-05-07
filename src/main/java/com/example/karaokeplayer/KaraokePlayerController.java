@@ -85,6 +85,13 @@ public class KaraokePlayerController {
             media = new Media(url);
             mediaPlayer = new MediaPlayer(media);
 
+            mediaView.setMediaPlayer(mediaPlayer);
+
+            //initialVolume
+            volumeSlider.setValue(20);
+            mediaPlayer.setVolume(0.2);
+
+
             volumeSlider.valueProperty().addListener((obs, oldVal, newVal) -> {
                 if (mediaPlayer != null) {
                     mediaPlayer.setVolume(newVal.doubleValue() / 100.0);
