@@ -18,6 +18,7 @@ public class Main extends Application {
 
         Image logo = new Image(getClass().getResourceAsStream("MicLogo.jpg"));
         stage.getIcons().add(logo);
+        stage.setResizable(false);
 
 
         stage.setTitle("Welcome");

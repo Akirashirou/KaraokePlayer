@@ -9,18 +9,24 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.karaokeplayer.LandingPage"
-            prefHeight="400.0" prefWidth="600.0">
+            fx:controller="com.example.karaokeplayer.MediaPlayer">
 
-    <VBox alignment="CENTER" spacing="20.0" layoutX="150.0" layoutY="100.0">
+    <!-- VBox for centered content inside the AnchorPane -->
+    <VBox alignment="CENTER" spacing="20.0" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="100" AnchorPane.bottomAnchor="100">
         <children>
+            <!-- ImageView will scale based on the layout -->
             <ImageView fitWidth="100" fitHeight="100">
                 <image>
                     <Image url="@MicLogo.jpg" />
                 </image>
             </ImageView>
+
+            <!-- Text that will also scale based on layout -->
             <Text text="🎤 Welcome to Karaoke Player!" style="-fx-font-size: 24px;" />
+
+            <!-- Button to enter player, adjusts with the VBox layout -->
             <Button text="Enter Player" onAction="#enterPlayer" prefWidth="200" />
+
         </children>
     </VBox>
 </AnchorPane>
